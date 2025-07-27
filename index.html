@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Tool Hub</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1E1E2F;
+            color: #EAEAEA;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2B2D42;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #FFD700;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #CCCCCC;
+        }
+
+        /* Tools Grid Styles */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .tool-card {
+            background-color: #3A3D5B;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            background-color: #FFD700;
+            color: #1E1E2F;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+        }
+
+        .tool-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: inherit;
+        }
+
+        .tool-card p {
+            margin-bottom: 1.5rem;
+            color: inherit;
+            opacity: 0.9;
+            flex-grow: 1;
+        }
+
+        .tool-card button {
+            background-color: #FFD700;
+            color: #1E1E2F;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .tool-card:hover button {
+            background-color: #1E1E2F;
+            color: #FFD700;
+        }
+
+        .tool-card button:hover {
+            background-color: #E6C200;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2B2D42;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            color: #CCCCCC;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tool-card {
+                padding: 1rem;
+            }
+
+            .tool-card h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Multi Tool Hub</h1>
+        <p>Your one-stop solution for all essential online tools</p>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <p>Access a variety of powerful tools to simplify your digital tasks. From media conversion to financial calculators, we've got you covered.</p>
+        </section>
+
+        <section class="tools-grid">
+            <!-- Tool Card 1: Image Converter -->
+            <div class="tool-card">
+                <h2>Image Converter</h2>
+                <p>Convert images between different formats like JPG, PNG, WEBP, and more with just a few clicks.</p>
+                <button onclick="redirectToTool('Image Converter')">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 2: Image Compressor -->
+            <div class="tool-card">
+                <h2>Image Compressor</h2>
+                <p>Reduce image file sizes without significant quality loss, perfect for web optimization.</p>
+                <button onclick="redirectToTool('Image Compressor')">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 3: Image Crop -->
+            <div class="tool-card">
+                <h2>Image Crop</h2>
+                <p>Crop and resize your images to the perfect dimensions for social media or websites.</p>
+                <button onclick="redirectToTool('Image Crop')">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 4: Video Converter -->
+            <div class="tool-card">
+                <h2>Video Converter</h2>
+                <p>Convert videos between various formats like MP4, AVI, MOV, and more with ease.</p>
+                <button onclick="redirectToTool('Video Converter')">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 5: Age Calculator -->
+            <div class="tool-card">
+                <h2>Age Calculator</h2>
+                <p>Calculate your exact age in years, months, and days based on your birth date.</p>
+                <button onclick="redirectToTool('Age Calculator')">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 6: EMI Calculator -->
+            <div class="tool-card">
+                <h2>EMI Calculator</h2>
+                <p>Calculate your Equated Monthly Installments for loans with detailed breakdowns.</p>
+                <button onclick="redirectToTool('EMI Calculator')">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 7: SIP Calculator -->
+            <div class="tool-card">
+                <h2>SIP Calculator</h2>
+                <p>Plan your Systematic Investment Plan returns with this powerful calculator.</p>
+                <button onclick="redirectToTool('SIP Calculator')">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 8: Audio Trim -->
+            <div class="tool-card">
+                <h2>Audio Trim</h2>
+                <p>Trim your audio files to the perfect length and export them in various formats.</p>
+                <button onclick="redirectToTool('Audio Trim')">Use Tool</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Multi Tool Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for button click functionality
+        function redirectToTool(toolName) {
+            alert(`Redirecting to ${toolName}...`);
+            // In a real implementation, this would navigate to the actual tool page
+            // window.location.href = `/${toolName.toLowerCase().replace(' ', '-')}`;
+        }
+
+        // Additional JavaScript for enhanced interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animation class to tool cards for staggered loading
+            const toolCards = document.querySelectorAll('.tool-card');
+            
+            toolCards.forEach((card, index) => {
+                // Add slight delay to each card for staggered animation
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+  </html>
